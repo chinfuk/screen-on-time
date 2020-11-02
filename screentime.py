@@ -14,12 +14,12 @@ unlock = 0
 screenon = []
 path = sys.argv[1]
 
+''' times phone was unlocked'''
+
 #open the csv file into a reader
 with open (path,'r') as file:
     reader = csv.DictReader(file)
 
-    ''' times phone was unlocked'''
-    
     #add items to a list
     for row in reader:
         #print(row)
@@ -30,7 +30,7 @@ with open (path,'r') as file:
         for x in range(0, len(count)):
            count[x] = int(count[x])
 
-    ''' total time screen was on for'''
+''' total time screen was on for'''
     
 #open the csv file into a reader
 with open (path,'r') as file:
@@ -50,14 +50,13 @@ with open (path,'r') as file:
     second = math.floor((totalmilis / 1000) % 60)
     minute = math.floor((totalmilis / (1000 * 60)) % 60)
     hour = math.floor((totalmilis / (1000 * 60 * 60)) % 24)
-    #total = math.floor(hour), math.floor(minute), math.floor(second)
-    total = (f'{hour}:{minute}:{second}')
+    total = (f'{hour:02}:{minute:02}:{second:02}')
 
     '''show the result'''
 
     #show screen on time  
     print(f' you unlocked your phone {count[-1]} times yesterday, your screen was on for {total}') 
-    #print(f'and your screen was on for {total}')
+    
     
 
 
