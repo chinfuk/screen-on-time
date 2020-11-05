@@ -11,4 +11,4 @@ tasker will flash total everytime the screen is unlocked, add a  1x1 tasker widg
 included is a small sample.csv file for testing
 
 at the moment the csv is added with the comand line arguments. ie, '>python screentime.py sample.csv' 
-i hope to make this more autonomous in the future
+I hope to make this more autonomous in the future
